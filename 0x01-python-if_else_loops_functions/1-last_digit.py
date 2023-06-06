@@ -7,7 +7,7 @@ if number < 0:
 
 if dig == 0:
     print(f"Last digit of {number} is {dig} and is 0")
-elif abs(number) % 10 < 6:
+elif dig < 6:
     print(f"Last digit of {number} is {dig} and is less than 6 and not 0")
 else:
     print(f"Last digit of {number} is {dig} and is greater than 5")
