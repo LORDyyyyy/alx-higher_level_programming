@@ -23,7 +23,6 @@ class Square:
 
         self.__size = size
         self.__position = position
-        # self.size = size
 
     @property
     def size(self):
@@ -49,35 +48,22 @@ class Square:
         """returns the current square area"""
         return self.__size ** 2
 
-    """
+    
     def my_print(self):
-        prints the square
+        """prints the square"""
 
         if self.__size == 0:
             print()
         else:
+            for y in range(self.__position[1]):
+                print()
+
             for i in range(self.__size):
+                print(' ' * self.__position[0], end='')
                 for j in range(self.__size):
                     print('#', end='')
                 print('')
     
-    def my_print(self):
-        if self.size == 0:
-            print()
-        else:
-            for _ in range(self.position[1]):
-                print()
-            for _ in range(self.size):
-                print(" " * self.position[0] + "#" * self.size)
-    """
-    def my_print(self):
-        if self.__size == 0:
-            print()
-        else:
-            for _ in range(self.__position[1]):
-                print()
-            for _ in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
     @property
     def position(self):
         """retrieve the position tuple"""
