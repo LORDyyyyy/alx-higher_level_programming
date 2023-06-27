@@ -28,7 +28,7 @@ class Square:
         elif position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
 
-        self.__position = position.copy()
+        self.__position = position
 
     @property
     def size(self):
