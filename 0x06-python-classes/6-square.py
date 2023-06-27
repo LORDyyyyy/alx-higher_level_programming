@@ -60,7 +60,7 @@ class Square:
                 for j in range(self.__size):
                     print('#', end='')
                 print('')
-    """
+    
     def my_print(self):
         if self.size == 0:
             print()
@@ -69,6 +69,15 @@ class Square:
                 print()
             for _ in range(self.size):
                 print(" " * self.position[0] + "#" * self.size)
+    """
+    def my_print(self):
+        if self.size == 0:
+            print()
+        else:
+            for _ in range(self.__position[1]):
+                print()
+            for _ in range(self.__size):
+                print(" " * self.__position[0] + "#" * self.__size)
     @property
     def position(self):
         """retrieve the position tuple"""
