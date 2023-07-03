@@ -112,6 +112,6 @@ class Rectangle:
         return "Rectangle({}, {})".format(w, h)
 
     def __del__(self):
-        """delets the class and sends a message"""
+        """deletes the instance and sends a message"""
 
         print('Bye rectangle...')
