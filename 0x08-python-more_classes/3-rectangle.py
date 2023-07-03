@@ -81,7 +81,7 @@ class Rectangle:
             return 2 * self.__height + 2 * self.__width
 
     def print_rect(self):
-        """ prints the rectangle """
+        """ prints the rectangle"""
 
         w = self.__width
         h = self.__height
