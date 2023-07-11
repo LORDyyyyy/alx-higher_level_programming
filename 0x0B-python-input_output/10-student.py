@@ -19,6 +19,6 @@ class Student:
         else:
             dict = {}
             for i in attrs:
-                if hasatter(self, i):
+                if hasattr(self, i):
                     dict[i] = getattr(self, nm)
-            return (dict)
+            return dict
