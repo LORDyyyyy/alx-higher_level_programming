@@ -20,5 +20,5 @@ class Student:
             dict = {}
             for i in attrs:
                 if hasattr(self, i):
-                    dict[i] = getattr(self, nm)
+                    dict[i] = getattr(self, i)
             return dict
