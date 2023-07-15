@@ -103,6 +103,7 @@ class Rectangle(Base):
             print()
         for _ in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
+
     def __str__(self):
         """
             overriding the __str__ method
@@ -112,9 +113,9 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) \
 {self.x}/{self.y} - {self.width}/{self.height}"
 
-
     def update(self, *args):
         """update everything value"""
+
         try:
             self.id = args[0]
             self.width = args[1]
@@ -123,4 +124,3 @@ class Rectangle(Base):
             self.y = args[4]
         except IndexError:
             pass
-
