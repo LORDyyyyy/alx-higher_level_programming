@@ -34,8 +34,8 @@ class Square(Rectangle):
 
         if args is None or len(args) == 0:
             for key, value in kwargs.items():
-                if hasattr(self, key) == True:
-                     self.__setattr__(key, value)
+                if hasattr(self, key) is True:
+                    self.__setattr__(key, value)
         else:
             try:
                 self.id = args[0]
