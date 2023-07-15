@@ -99,9 +99,10 @@ class Rectangle(Base):
 
     def display(self):
         """prints in stdout the Rectangle"""
+        for _ in range(self.__y):
+            print()
         for _ in range(self.__height):
-            print("#" * self.__width)
-
+            print(" " * self.__x + "#" * self.__width)
     def __str__(self):
         """
             overriding the __str__ method
