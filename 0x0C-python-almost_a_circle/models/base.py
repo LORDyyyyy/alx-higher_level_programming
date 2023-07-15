@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Here goes EVERYTHING """
 
+
 class Base:
     """Base class, do nothing at this moment"""
 
