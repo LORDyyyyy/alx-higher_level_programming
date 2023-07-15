@@ -128,3 +128,14 @@ class Rectangle(Base):
                 self.y = args[4]
             except IndexError:
                 pass
+
+    def to_dictionary(self):
+        """save as dict"""
+
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
