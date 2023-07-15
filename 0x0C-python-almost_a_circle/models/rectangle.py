@@ -9,10 +9,10 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
@@ -27,6 +27,7 @@ class Rectangle(Base):
         """
             Set private attribute
         """
+        self.valid_attr("width", value)
         self.__width = value
 
     @property
@@ -41,6 +42,7 @@ class Rectangle(Base):
         """
             Set private attribute
         """
+        self.valid_attr("height", value)
         self.__height = value
 
     @property
@@ -55,6 +57,7 @@ class Rectangle(Base):
         """
             Set private attribute
         """
+        self.valid_attr("x", value)
         self.__x = value
 
     @property
@@ -69,4 +72,22 @@ class Rectangle(Base):
         """
             Set private attribute
         """
+        self.valid_attr("y", value)
         self.__y = value
+
+    @staticmethod
+    def valid_attr(attr_name, value):
+        """Check the type and the value for every setter method
+        Args:
+            attr_name (str): name of the attribute
+            value (int): attribute value
+        """
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(attr_name))
+
+        if attr_name in ['width', 'height']:
+            if value <= 0:
+                raise ValueError("{} must be > 0".format(attr_name))
+        else:
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(attr_name))
