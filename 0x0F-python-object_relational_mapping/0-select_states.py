@@ -5,7 +5,7 @@ import sys
 
 
 def list_states(username, password, database):
-    """ 
+    """
         List all states from a database
 
     Args:
