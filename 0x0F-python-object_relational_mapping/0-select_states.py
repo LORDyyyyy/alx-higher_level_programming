@@ -5,6 +5,15 @@ import sys
 
 
 def list_states(username, password, database):
+    """ 
+        List all states from a database
+
+    Args:
+        username: mysql username
+        password: mysql password
+        database: database name
+    """
+
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
