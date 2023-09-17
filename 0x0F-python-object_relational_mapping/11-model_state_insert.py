@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
-    
+
     new_state = State(name="Louisiana")
 
     session.add(new_state)
