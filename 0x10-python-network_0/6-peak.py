@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" find_peak function """
 
 
 def find_peak(nums):
