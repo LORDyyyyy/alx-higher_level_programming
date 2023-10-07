@@ -9,4 +9,4 @@ if __name__ == "__main__":
 
     response = requests.get(url, auth=auth)
     user_data = response.json()
-    print(user_data['id'])
+    print(user_data.get('id'))
