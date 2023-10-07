@@ -17,7 +17,8 @@ if __name__ == "__main__":
         for item in list(data):
             if i == 10:
                 break
-            print(f"{item.get('sha')}:", item.get('commit').get('committer').get('name'))
+            print(f"{item.get('sha')}:",
+                    item.get('commit').get('author').get('name'))
             i += 1
     except IndexError:
         pass
