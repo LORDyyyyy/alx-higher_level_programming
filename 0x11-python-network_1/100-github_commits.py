@@ -13,8 +13,11 @@ if __name__ == "__main__":
 
     i = 0
 
-    for item in list(data):
-        if i == 10:
-            break
-        print(f"{item['sha']}:", item['commit']['committer']['name'])
-        i += 1
+    try:
+        for item in list(data):
+            if i == 10:
+                break
+            print(f"{item.get('sha')}:", item.get('commit').get('committer').get('name'))
+            i += 1
+    except IndexError:
+        pass
